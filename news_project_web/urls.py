@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include,path,re_path
+from django.conf.urls.static import static
+from . import settings
+from news_web.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    re_path(r'^$', index, name='index'),
+    path('category/', category, name='category'),
+    path('article/', article, name='article'),
+    path('search/', search, name='search'),
+    path('item/', item, name='item'),
+    path('tag/', tag, name='tag'),
+    # path('logout/', tag, name='logout'),
 ]
