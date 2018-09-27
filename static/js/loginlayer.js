@@ -123,7 +123,7 @@
          var json_str = JSON.stringify(var_data);
 
           $.ajax({
-                    url: "http://127.0.0.1:8005/userLogin/",
+                    url: "http://127.0.0.1:8000/userLogin/",
                     type: "POST",
                     data: json_str,
                     contentType: "application/json",
@@ -199,7 +199,7 @@
              }
              var json_str = JSON.stringify(var_data);
              $.ajax({
-                        url: "http://127.0.0.1:8005/user/",
+                        url: "http://127.0.0.1:8000/user/",
                         type: "POST",
                         data: json_str,
                         contentType: "application/json",

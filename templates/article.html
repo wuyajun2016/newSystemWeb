@@ -42,11 +42,11 @@
          var var_data = {
                         "articles": {{ article.id }},
                         "user":  userid,
-                        "token ": $.cookie('api_token'),
+                        {#"token ": $.cookie('api_token'),#}
              }
              var json_str = JSON.stringify(var_data);
              $.ajax({
-                        url: "http://127.0.0.1:8005/userFav/",
+                        url: "http://127.0.0.1:8000/userFav/",
                         type: "POST",
                         data: json_str,
                         contentType: "application/json",
